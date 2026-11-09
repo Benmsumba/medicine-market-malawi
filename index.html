@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Medicine Market Malawi · Demo</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" type="module"></script>
+</head>
+<body>
+<header><div class="shell bar"><a class="brand" href="#">Medicine Market <small>MW</small></a><nav aria-label="Main navigation"><a href="#compare">Compare prices</a><a href="#workspace">Pharmacy workspace</a></nav></div></header>
+<main class="shell">
+<p class="banner"><strong>Fictional demo.</strong> Prices, stock and pharmacies are examples. Do not use them to plan a purchase or trip.</p>
+<section class="hero" aria-labelledby="title"><p class="kicker">MALAWI · MEDICINE PRICE DISCOVERY</p><h1 id="title">Compare before you go.</h1><p>See example prices in kwacha, compare matching products, and check when availability was last confirmed.</p></section>
+<section class="card" id="compare" aria-labelledby="compare-title">
+<h2 id="compare-title">Find a medicine</h2>
+<div class="fields">
+<label>Medicine name<input id="search" type="search" placeholder="Try paracetamol or an example brand"></label>
+<label>Area<select id="area"><option value="">All areas</option></select></label>
+<label>Availability<select id="availability"><option value="">Any availability</option><option value="in">Confirmed in stock</option><option value="out">Reported out of stock</option><option value="unknown">Unconfirmed</option></select></label>
+</div>
+<p id="count" role="status"></p><div id="results"></div>
+</section>
+<section class="card" id="workspace" aria-labelledby="workspace-title">
+<h2 id="workspace-title">Pharmacy workspace</h2>
+<p>Try changing an example listing, then see it update in the comparison above. Changes and history stay in this browser.</p>
+<form id="listing-form">
+<div class="fields">
+<label>Example branch<select name="branch" required></select></label>
+<label>Exact product<select name="product" required></select></label>
+<label>Pack price (MWK)<input name="price" type="number" min="1" max="100000000" step="1" required></label>
+<label>Availability<select name="stock"><option value="in">In stock</option><option value="out">Out of stock</option><option value="unknown">Unconfirmed</option></select></label>
+</div>
+<button>Confirm listing</button><span id="save-status" role="status"></span>
+</form>
+<h3>Update history</h3><ol id="history"></ol>
+</section>
+<footer>Prototype for pharmacy conversations. It does not take orders or collect customer information.</footer>
+</main>
+</body>
+</html>
